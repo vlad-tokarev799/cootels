@@ -1,0 +1,21 @@
+:root {
+    --containerWidth: 1200px;
+
+    @media (max-width: 1240px) {
+        --containerWidth: 960px;
+    }
+
+    @media (max-width: 990px) {
+        --containerWidth: 738px;
+    }
+
+    @media (max-width: 768px) {
+        --containerWidth: 100%;
+    }
+}
+
+.container {
+    width: var(--containerWidth);
+    padding: 0 15px;
+    margin: 0 auto;
+}
