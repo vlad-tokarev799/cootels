@@ -4,4 +4,17 @@
     font-size: 2em;
     line-height: 1.2em;
     color: $title-color;
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    @media (max-width: $vp-sm) {
+        font-size: 1.7em;
+    }
+
+    @media (max-width: $vp-xxsm) {
+        font-size: 1.4em;
+    }
 }

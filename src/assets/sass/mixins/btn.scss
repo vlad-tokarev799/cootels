@@ -2,7 +2,6 @@
     background: $button-bg-color;
     border-radius: 4px;
     font-weight: 500;
-    font-size: 1rem;
     line-height: 1.18em;
     color: #fff;
     cursor: pointer;
@@ -16,5 +15,9 @@
 
     &:active {
         border-color: transparent;
+    }
+
+    &:focus {
+        outline: none;
     }
 }

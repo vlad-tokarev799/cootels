@@ -1,21 +1,76 @@
 .header {
     padding: 2.3em 0;
 
+    @media (max-width: $vp-wide) {
+        padding: 1.4em 0;
+    }
+
+    @media (max-width: $vp-md) {
+        padding: 1em 0;
+    }
+
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
+    &__logo {
+        @media (max-width: $vp-md) {
+            order: 1;
+        }
+    }
+
+    &__btn {
+        @include btn;
+        padding: 0.62em 0.75em;
+        font-size: 1em;
+
+        @media (max-width: $vp-md) {
+            order: 2;
+        }
+
+        @media (max-width: $vp-xsm) {
+            font-size: 0.9em;
+        }
+    }
 }
 
 .top-nav {
 
+    @media (max-width: $vp-md) {
+        position: relative;
+        order: 0;
+    }
+
     &__list {
         display: flex;
+
+        @media (max-width: $vp-md) {
+            display: none;
+
+            &_open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                background: darken(#fff, 5%);
+                top: 45px;
+                left: 0;
+                width: 280px;
+                font-size: 1.2em;
+            }
+        }
     }
 
     &__item {
         margin: 0 16px;
+
+        @media (max-width: $vp-md) {
+            margin: 0;
+            &:hover, &_active {
+                background: darken(#fff, 10%);
+            }
+        }
     }
 
     &__link {
@@ -27,8 +82,40 @@
         border-bottom: 1px solid transparent;
         transition: .1s ease;
 
+        &:focus {
+            outline: none;
+        }
+
         &:hover {
             border-bottom: 1px solid $title-color;
+        }
+
+        @media (max-width: $vp-md) {
+            display: block;
+            padding: 0.6em 0 0.6em 1em;
+            border-bottom: none;
+            background: inherit;
+
+            &:hover {
+                border-bottom: 0;
+            }
+        }
+    }
+
+    &__burger-menu {
+        @media (max-width: $vp-md) {
+            width: 40px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    
+            span {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background: $title-color;
+            }
         }
     }
 }

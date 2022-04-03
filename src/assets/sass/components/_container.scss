@@ -1,15 +1,15 @@
 :root {
     --containerWidth: 1200px;
 
-    @media (max-width: 1240px) {
+    @media (max-width: $vp-wide) {
         --containerWidth: 960px;
     }
 
-    @media (max-width: 990px) {
+    @media (max-width: $vp-md) {
         --containerWidth: 738px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $vp-tablet) {
         --containerWidth: 100%;
     }
 }

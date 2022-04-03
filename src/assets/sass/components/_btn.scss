@@ -1,4 +1,5 @@
 .btn {
     @include btn;
-    padding: 12px 28px;
+    font-size: 1rem;
+    padding: 0.75em 1.125em;
 }
