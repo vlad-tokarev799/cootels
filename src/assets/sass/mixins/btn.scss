@@ -1,0 +1,20 @@
+@mixin btn {
+    background: $button-bg-color;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.18em;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid $button-bg-color;
+    transition: .1s ease;
+
+    &:hover {
+        background: transparent;
+        color: $button-bg-color;
+    }
+
+    &:active {
+        border-color: transparent;
+    }
+}

@@ -1,5 +1,12 @@
 @import 'reset';
 @import "vars";
+@import 'fonts';
 @import 'default';
 
+@import 'mixins/btn.scss';
+
 @import 'components/container';
+@import 'components/logo';
+@import 'components/btn';
+
+@import 'blocks/header.scss';
