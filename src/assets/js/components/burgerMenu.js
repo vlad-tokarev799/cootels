@@ -1,4 +1,4 @@
-$('.top-nav__burger-menu').click(function() {
-    $(this).toggleClass('top-nav__burger-menu__open')
-    $('.top-nav__list').toggleClass('top-nav__list_open')
+$('.header__burger-menu').click(function() {
+    $(this).toggleClass('header__burger-menu_open')
+    $('.top-nav').toggleClass('top-nav_open')
 })

@@ -10,55 +10,104 @@
     }
 
     &__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        display: grid;
+        grid-template-columns: 1fr 2fr;
 
-    &__logo {
         @media (max-width: $vp-md) {
-            order: 1;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            grid-template-columns: none;
         }
     }
 
-    &__btn {
-        @include btn;
-        padding: 0.62em 0.75em;
-        font-size: 1em;
+    &__burger-menu {
+        display: none;
 
         @media (max-width: $vp-md) {
-            order: 2;
-        }
+            width: 40px;
+            height: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+    
+            span {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background: $title-color;
+                transition: .1s ease;
+                position: absolute;
 
-        @media (max-width: $vp-xsm) {
-            font-size: 0.9em;
+                &:nth-child(1) {
+                    top: 0;
+                }
+
+                &:nth-child(2) {
+                    top: calc(50% - 1.5px);
+                }
+
+                &:nth-child(3) {
+                    bottom: 0;
+                }
+            }
+
+            &_open {
+                span {               
+                    &:nth-child(1) {
+                        transform: rotate(45deg);
+                        top: calc(50% - 1.5px);
+                    }
+
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    &:nth-child(3) {
+                        transform: rotate(-45deg);
+                        bottom: calc(50% - 1.5px);
+                    }
+                }
+            }
         }
     }
 }
 
 .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     @media (max-width: $vp-md) {
-        position: relative;
-        order: 0;
+        z-index: -1;
+        opacity: 0;
+        flex-direction: column-reverse;
+        align-items: center;
+        position: absolute;
+        background: darken(#fff, 5%);
+        top: 45px;
+        right: 15px;
+        width: 280px;
+        font-size: 1.2em;
+        padding-top: 1em;
+        transition: opacity .1s ease;
+
+        &_open {
+            z-index: 10;
+            opacity: 1;
+        }
     }
 
     &__list {
         display: flex;
+        // text-align: center;
+        // width: 100%;
 
         @media (max-width: $vp-md) {
-            display: none;
-
-            &_open {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                background: darken(#fff, 5%);
-                top: 45px;
-                left: 0;
-                width: 280px;
-                font-size: 1.2em;
-            }
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
         }
     }
 
@@ -92,7 +141,7 @@
 
         @media (max-width: $vp-md) {
             display: block;
-            padding: 0.6em 0 0.6em 1em;
+            padding: 0.6em 0 0.6em 0;
             border-bottom: none;
             background: inherit;
 
@@ -102,20 +151,19 @@
         }
     }
 
-    &__burger-menu {
+    &__btn {
+        @include btn;
+        padding: 0.62em 0.75em;
+        font-size: 1em;
+
         @media (max-width: $vp-md) {
-            width: 40px;
-            height: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-    
-            span {
-                display: block;
-                width: 100%;
-                height: 3px;
-                background: $title-color;
-            }
+            order: 2;
+            font-size: .8em;
+            padding: 0.5em 0.6em;
+        }
+
+        @media (max-width: $vp-xsm) {
+            font-size: 0.9em;
         }
     }
 }
