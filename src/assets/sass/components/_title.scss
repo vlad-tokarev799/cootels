@@ -9,6 +9,7 @@
 
     &_big {
         font-size: 3em;
+        line-height: 1.4em;
 
         @media (max-width: $vp-xxsm) {
             font-size: 2.6em;

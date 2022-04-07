@@ -11,7 +11,6 @@
     }
 
     @media (max-width: $vp-xsm) {
-        font-size: 0.65rem;
         padding: 2em 0;
     }
     
@@ -41,6 +40,7 @@
             width: 450px;
             align-items: center;
             text-align: center;
+            margin-top: 2em;
         }
 
         @media (max-width: $vp-xsm) {
@@ -49,14 +49,20 @@
     }
 
     &__title {
-        line-height: 1.4em;
+        @media (max-width: $vp-xsm) {
+            font-size: 2em;
+        } 
     }
 
     &__pgh {
         width: 485px;
         max-width: 100%;
         margin-top: 1.333em;
-        margin-bottom: 2.5em;
+        margin-bottom: 1.777em;
+
+        @media (max-width: $vp-xsm) {
+            font-size: 1.6em;
+        }
     }
 
     &__img {
