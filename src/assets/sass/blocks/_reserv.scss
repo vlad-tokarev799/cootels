@@ -1,0 +1,30 @@
+.reserv {
+    padding: 5em 0;
+
+    &__text {
+        width: 588px;
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto 5em;
+
+        @media (max-width: $vp-sm) {
+            font-size: 0.9em;
+        }
+    }
+
+    &__title {
+
+        @media (max-width: $vp-sm) {
+            font-size: 2.1em;
+        }
+    }
+
+    &__pgh {
+        margin-top: 1.3333em;
+        margin-bottom: 1.7777em;
+
+        @media (max-width: $vp-sm) {
+            margin-top: 1.1em;
+        }
+    }
+}
