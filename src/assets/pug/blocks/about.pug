@@ -1,10 +1,18 @@
-.text-with-image
+.section.text-with-image
     .text-with-image__wrapper.text-with-image__wrapper--left
         .container.text-with-image__container
-            .text-with-image__img
+            .text-with-image__img(class=leftAni)
                 img(src="assets/img/about.png")
             .text-with-image__content
-                h2.title.text-with-image__title Cozy and Down to Earth Cootage Hotel in Norway.
-                p.pgh.text-with-image__pgh Our Cootage Hotel is an intimate hideway concieved for dicerning travelers. It faces directly the unique and spectacular panorama of the Hallerbos Jungle.
-                p.pgh.text-with-image__pgh Cootels extends along a private, quiet, and beautiful nature. Stay away from crowd and enjoy the cozy and beauty with us.
-                a.btn.text-with-image__btn Learn More
+
+                h2.title.text-with-image__title(class=rightAni) 
+                    | Cozy and Down to Earth Cootage Hotel in Norway.
+
+                p.pgh.text-with-image__pgh(class=rightAni)
+                    | Our Cootage Hotel is an intimate hideway concieved for dicerning travelers. It faces directly the unique and spectacular panorama of the Hallerbos Jungle.
+
+                p.pgh.text-with-image__pgh(class=rightAni)
+                    | Cootels extends along a private, quiet, and beautiful nature. Stay away from crowd and enjoy the cozy and beauty with us.
+                    
+                a.btn.text-with-image__btn(class=rightAni)
+                    | Learn More

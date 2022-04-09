@@ -1,0 +1,111 @@
+.questions {
+    counter-reset: list;
+
+    .question {
+        counter-increment: list;
+
+        &__title:before {
+            content: counter(list) ".";
+        }
+    }
+}
+
+.question {
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.07);
+    position: relative;
+    padding: 2em 2.25em; 
+    margin-bottom: 1.5em;
+    box-sizing: border-box;
+
+    @media (max-width: $vp-xsm) {
+        padding: 1.5em 1.7em;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &_open {
+        .question__text {
+            margin-top: 1.333em;
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        .question__btn {
+            background: $ui-accent;
+            transform: rotate(180deg);
+
+            svg {
+                stroke: #fff;
+            }
+        }
+    }
+
+    &__preview {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 1.5em;
+        line-height: 1.5em;
+        color: $link-color;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+
+        @media (max-width: $vp-xsm) {
+            font-size: 1.3em;
+        }
+
+        &:before {
+            display: block;
+            width: 1em;
+            margin-right: 0.5em;
+        }
+    }
+
+    &__btn {
+        border: 0;
+        padding: 0;
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 50%;
+        background: #FFECE2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2.25em;
+        transition: .1s ease-in-out;
+        flex-shrink: 0;
+
+        @media (max-width: $vp-xsm) {
+            margin-left: 1.7em;
+        }
+
+        svg {
+            stroke: $ui-accent;
+            width: 60%;
+            height: 60%;
+
+            transition: .1s ease-in-out;
+        }
+    }
+
+    &__text {
+        font-size: 1.125em;
+        line-height: 1.5em;
+        color: $pgh-color;
+        overflow: hidden;
+
+        max-height: 0;
+        opacity: 0;
+
+        transition: .1s ease-in-out;
+    }
+}

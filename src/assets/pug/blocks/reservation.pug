@@ -1,26 +1,32 @@
-.reserv
+.section.reserv
     .container.reserv__container
+
         .reserv__text
-            h2.title.reserv__title Many Rooms to Choose
-            p.pgh.reserv__pgh 
+
+            h2.title.reserv__title(class=leftAni) Many Rooms to Choose
+            p.pgh.reserv__pgh(class=rightAni) 
                 | There is a room for every needs. We have room for individuals until family size, we also have a cabin for more private experience
-            a.btn.reserv__btn Explore more
+            a.btn.reserv__btn(class=leftAni) Explore more
+
         .rooms.reserv__rooms
-            .room
+
+            .room(class=bottomAni)
                 .room__image
                     img(src="assets/img/rooms/single.png", alt="")
                 h3.room__title Single Room
                 p.room__descr
                     | Best for a brave lone wolf who need comfort and quiet quality time, but you still have a chance to meet others.
                 a.room__link Learn more
-            .room
+            
+            .room(class=bottomAni)
                 .room__image
                     img(src="assets/img/rooms/double.png", alt="")
                 h3.room__title Double Room
                 p.room__descr
                     | Best for couple, seek happiness in intimacy without worry of being disturbed. Feel the whole world just for you two
                 a.room__link Learn more
-            .room
+            
+            .room(class=bottomAni)
                 .room__image
                     img(src="assets/img/rooms/cootage.png", alt="")
                 h3.room__title Cootage

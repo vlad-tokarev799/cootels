@@ -3,6 +3,8 @@
 @import 'fonts';
 @import 'default';
 
+@import 'plugins/animate.scss';
+
 @import 'mixins/btn.scss';
 
 @import 'components/container';
@@ -10,9 +12,12 @@
 @import 'components/btn';
 @import 'components/title';
 @import 'components/pgh';
+@import 'components/section';
 
 @import 'blocks/header';
 @import 'blocks/hero';
 @import 'blocks/text-with-image';
 @import 'blocks/reserv';
 @import 'blocks/rooms';
+@import 'blocks/questions';
+@import 'blocks/faq';

@@ -1,18 +1,5 @@
 .text-with-image {
-    padding: 5em 0;
-
-    @media (max-width: $vp-wide) {
-        padding: 4em 0;
-    }
-
-    @media (max-width: $vp-md) {
-        padding: 3em 0;
-    }
-
-    @media (max-width: $vp-xsm) {
-        padding: 2em 0;
-    }
-
+    
     &__wrapper {
         margin-bottom: 2em;
 

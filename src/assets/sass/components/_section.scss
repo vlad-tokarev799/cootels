@@ -1,0 +1,11 @@
+.section {
+    padding: 5em 0;
+
+    @media (max-width: $vp-wide) {
+        padding: 4em 0;
+    }
+
+    @media (max-width: $vp-md) {
+        padding: 3em 0;
+    }
+}

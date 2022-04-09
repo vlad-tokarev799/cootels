@@ -9,10 +9,14 @@ html(lang="en")
 
         title Document
     body 
+        include assets/pug/data/animationArrays
+
         include assets/pug/components/header
+
         include assets/pug/blocks/hero
         include assets/pug/blocks/about
         include assets/pug/blocks/benefit
         include assets/pug/blocks/reservation
+        include assets/pug/blocks/faq
 
-        script(src="assets/js/index.js") 
+        script(src="assets/js/index.js" defer) 
