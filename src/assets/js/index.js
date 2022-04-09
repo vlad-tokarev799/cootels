@@ -1,9 +1,11 @@
-//= plugins/jquery-3.6.0.js
 //= plugins/wow.js
+//= plugins/splide.js
 
 //= components/burgerMenu.js
 //= components/questions.js
+//= components/reviews.js
 
 new WOW({
-    offset: 100
+    offset: 100,
+    mobile: false
 }).init()
