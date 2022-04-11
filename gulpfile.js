@@ -27,11 +27,11 @@ var path = {
         fonts: 'dist/assets/fonts/'
     },
     prod: {
-        html: 'prod/',
-        js: 'prod/assets/js/',
-        css: 'prod/assets/css/',
-        images: 'prod/assets/img/',
-        fonts: 'prod/assets/fonts/'
+        html: 'docs/',
+        js: 'docs/assets/js/',
+        css: 'docs/assets/css/',
+        images: 'docs/assets/img/',
+        fonts: 'docs/assets/fonts/'
     },
     src: {
         html: "src/*.html",
