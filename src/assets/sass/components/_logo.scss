@@ -6,6 +6,10 @@
     color: $title-color;
     text-decoration: none;
 
+    &_white {
+        color: #fff;
+    }
+
     &:focus {
         outline: none;
     }

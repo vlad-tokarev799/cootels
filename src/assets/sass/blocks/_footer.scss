@@ -1,0 +1,129 @@
+.footer {
+    background: $dark-bg-color;
+    padding: 7.5em 0;
+    color: #fff;
+
+    @media (max-width: $vp-wide) {
+        padding: 4em 0;
+    }
+
+    @media (max-width: $vp-md) {
+        padding: 3em 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: $vp-tablet) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+.footer-info {
+
+    @media (max-width: $vp-tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3em;
+    }
+
+    &__text {
+        font-size: 1em;
+        line-height: 1.75em;
+        color: $light-text-color;
+        width: 170px;
+        margin-top: 0.75em;
+        margin-bottom: 2.25em;
+    }
+
+    &__icons {
+        display: flex;
+    }
+
+    &__icon {
+        width: 2em;
+        height: 2em;
+        margin-right: 1.5em;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        svg {
+            width: 100%;
+            fill: #fff;
+        }
+    }
+}
+
+.footer-nav {
+    display: flex;
+    font-size: 1em;
+    line-height: 1.1875em;
+
+    @media (max-width: $vp-xsm) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__block {
+        margin-right: 7.5em;
+
+        @media (max-width: $vp-wide) {
+            margin-right: 4em;
+        }
+
+        @media (max-width: $vp-md) {
+            margin-right: 2em;
+        }
+
+        @media (max-width: $vp-xsm) {
+            margin-right: 0;
+            margin-bottom: 2em;
+        }
+
+        &:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        &:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        margin-bottom: 1.5em;
+    }
+
+    &__elem {
+        margin-bottom: 1.5em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        color: $light-text-color;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-bottom-color .1s ease-in-out;
+
+        &:hover, &:focus {
+            border-bottom-color: $light-text-color;
+        }
+    }
+}
